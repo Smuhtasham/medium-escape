@@ -21,7 +21,7 @@ function App() {
         <div className=" bg-[#FDFEF0]">
           <div className="flex w-[90%] m-auto justify-between items py-4">
             <div className="font-bold text-xl text-pink-500">Medium Escape</div>
-            <div className="pr-3">
+            <div className="pr-3 hidden sm:block">
               <ul className="flex gap-6 font-normal cursor-pointer">
                 <li>Home</li>
                 <li>Our Services</li>
@@ -34,7 +34,7 @@ function App() {
       </navbar>
       <section className="bg-[#FDFEF0] relative">
         <div className="w-[90%] flex flex-col m-auto justify-center items-center gap-7 py-32">
-          <div className="text-5xl leading-[80px] font-bold text-center  ">
+          <div className=" text-2xl sm:text-5xl leading-[50px] font-bold text-center  ">
             We help <span className="bg-[#7ab3fe4f]">brands</span> engage <br /> with their audience.
           </div>
           <div>
@@ -45,18 +45,22 @@ function App() {
               Get Started
             </button>
           </div>
-          <img className="w-40 absolute left-0 top-5 drop-shadow-[5px_5px_0px_rgba(122,180,254,0.5)] " src={first} />
-          <img className="w-20 absolute left-44 bottom-32 drop-shadow-[5px_5px_0px_rgba(255,105,179,0.5)]" src={secound} />
-          <img className="w-32 absolute right-60 bottom-6 drop-shadow-[5px_5px_0px_rgba(255,105,179,0.5)]" src={third} />
-          <img className="w-32 absolute right-0 top-48 drop-shadow-[5px_5px_0px_rgba(122,180,254,0.5)]" src={fourth} />
-          <img className=" absolute top-48 left-[56%]" src={cursor} />
+          <img className="w-32 absolute left-0 top-5 drop-shadow-[5px_5px_0px_rgba(122,180,254,0.5)]
+          lg:w-40 " src={first} />
+          <img className="w-14 absolute left-0 bottom-24 drop-shadow-[5px_5px_0px_rgba(255,105,179,0.5)]
+          lg:w-24 lg:left-40" src={secound} />
+          <img className="w-24 absolute right-14 top-10 drop-shadow-[5px_5px_0px_rgba(255,105,179,0.5)]
+          lg:w-28 lg:top-72 lg:right-72" src={third} />
+          <img className="w-20 absolute right-0 top-60 drop-shadow-[5px_5px_0px_rgba(122,180,254,0.5)] 
+          lg:w-36 lg:top-40" src={fourth} />
+          <img className=" absolute top-48 left-[56%] hidden" src={cursor} />
         </div>
       </section>
 
       <section className="bg-[#FDFEF0]">
         <div className="w-[90%] m-auto py-16 flex flex-col justify-center items-center">
           <div className="text-4xl font-bold pb-9">Our Services</div>
-          <div className="w-[100%] grid grid-cols-3 gap-2">
+          <div className="w-[100%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 ">
             <div className="bg-white px-6 py-5 border-8 border-black rounded-3xl ">
               <div className=" font-bold text-2xl text-pink-400">
                 Web Design
@@ -100,21 +104,21 @@ function App() {
       </section>
 
       <section className="bg-[#FDFEF0] relative">
-        <div className="w-[90%] m-auto py-5 flex flex-col justify-center items-center pb-96">
-          <div className="text-3xl font-bold pb-12">Our Portfolio</div>
-          <div className="flex">
-              <img className="w-18 absolute left-0" src={p1} />
-              <img className="w-[37%] absolute left-[11%]" src={p3} />
-              <img className="w-[37%] absolute right-[11%]" src={p2} />
-              <img className="w-18 absolute right-0" src={p4} />
+        <div className="w-[90%] m-auto py-5 flex flex-col justify-center items-center pb-[500px]">
+          <div className="text-3xl font-bold pb-10">Our Portfolio</div>
+          <div className="flex flex-col lg:flex-row ">
+              <img className="w-18 absolute left-0 hidden lg:block lg:w-20" src={p1} />
+              <img className="w-[300px] absolute left-[11%] lg:w-[490px] lg:left-[11%]" src={p3} />
+              <img className="w-[300px] absolute top-[350px] right-[11%] lg:w-[490px] sm:top-24 lg:top-24 lg:right-[11%]" src={p2} />
+              <img className="w-18 absolute right-0 hidden lg:block lg:w-20" src={p4} />
           </div>
         </div>
       </section>
 
-      <section className="bg-[#FDFEF0] py-40 relative">
+      <section className="bg-[#FDFEF0] py-10 relative">
         <div className="bg-white w-[90%] mx-auto py-20 flex flex-col justify-center items-center">
-          <div className="text-5xl font-bold text-center leading-[70px] pb-12">
-            Ready to take your Buisness to <br /> the next level?
+          <div className="w-[90%] text-2xl lg:text-5xl font-bold text-center leading-[50px] pb-12">
+            Ready to take your Buisness to the next level?
           </div>
           <button
             className="bg-pink-400 py-3 px-8 text-white rounded-lg
@@ -122,11 +126,11 @@ function App() {
           >
             Contact Us
           </button>
-          <img className="w-20 absolute right-[32%] top-[48%]" src={arrow} />
+          <img className="w-20 hidden lg:block absolute right-[32%] top-[48%]" src={arrow} />
         </div>
       </section>
       <footer className="bg-[#FDFEF0]">
-        <div className="flex w-[90%] m-auto justify-between py-10">
+        <div className="flex flex-col sm:flex-row lg:flex-row gap-6 w-[90%] m-auto justify-between py-10">
           <div className="flex flex-col">
             <div className="font-bold text-xl text-pink-500">Medium Escape</div>
             <div>
